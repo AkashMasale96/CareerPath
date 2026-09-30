@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Resume checklist — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Applications</p>
+  <h1>Resume checklist</h1>
+  <p class="lede">Work through these items before you send the next application. Need to refresh your plan? <a href="/upload">Upload a new resume</a>.</p>
+  <div class="progress-bar large"><span id="resume-bar"></span></div>
+  <p id="resume-meta" class="muted"></p>
+  <ul id="resume-list" class="checklist"></ul>
+</section>
+{% endblock %}

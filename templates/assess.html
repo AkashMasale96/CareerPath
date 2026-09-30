@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Assessment — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Step 1</p>
+  <h1>Student assessment</h1>
+  <p class="lede">Take a few minutes. Specific answers produce better career matches.</p>
+  <form id="assess-form" class="form-card">
+    <label>Full name
+      <input name="name" required maxlength="80" placeholder="Jordan Lee">
+    </label>
+    <label>Email
+      <input name="email" type="email" required placeholder="jordan@college.edu">
+    </label>
+    <div class="two-col">
+      <label>Education level
+        <select name="education_level" required>
+          <option value="">Select</option>
+          <option>High school</option>
+          <option>Undergraduate</option>
+          <option>Bootcamp / certificate</option>
+          <option>Graduate</option>
+        </select>
+      </label>
+      <label>Field of study
+        <input name="field_of_study" required placeholder="Computer Science">
+      </label>
+    </div>
+    <label>Interests <span class="hint">comma-separated</span>
+      <input name="interests" required placeholder="coding, design, data, helping people">
+    </label>
+    <fieldset>
+      <legend>Skills you already have</legend>
+      <div id="skill-options" class="chip-grid"></div>
+    </fieldset>
+    <label>Career goals
+      <textarea name="career_goals" required rows="4" placeholder="I want to build products, work with data, or join a security team after graduation."></textarea>
+    </label>
+    <div class="two-col">
+      <label>How you like to work
+        <select name="work_style" required>
+          <option value="">Select</option>
+          <option value="builder">Builder — I like making things</option>
+          <option value="analyst">Analyst — I like patterns and evidence</option>
+          <option value="people">People — I like coordinating and leading</option>
+          <option value="creator">Creator — I like stories, visuals, and brand</option>
+        </select>
+      </label>
+      <label>Experience level
+        <select name="experience_level" required>
+          <option value="">Select</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Some projects / internships</option>
+          <option value="advanced">Strong portfolio or work experience</option>
+        </select>
+      </label>
+    </div>
+    <p id="form-error" class="error" hidden></p>
+    <button class="btn primary" type="submit">Get career recommendations</button>
+  </form>
+</section>
+{% endblock %}

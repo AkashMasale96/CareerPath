@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}CareerPath AI — Find a career that fits{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Student career guidance</p>
+  <h1>Log in, upload your resume, get a plan that fits your skills.</h1>
+  <p class="lede">
+    CareerPath AI reads your resume, picks up your education and skills, and turns that into ranked careers,
+    a skill-gap view, a 6-month roadmap, projects, and interview prep.
+  </p>
+  <div class="hero-actions">
+    <a class="btn primary" href="/signup">Create account</a>
+    <a class="btn ghost" href="/login">Log in</a>
+  </div>
+</section>
+<section class="grid-3">
+  <article class="card">
+    <h2>Resume-first</h2>
+    <p>No long quiz. Upload PDF or DOCX and we extract what matters for matching.</p>
+  </article>
+  <article class="card">
+    <h2>Full path</h2>
+    <p>Careers, roadmap, projects, checklist, and interview questions from one scan.</p>
+  </article>
+  <article class="card">
+    <h2>Your account</h2>
+    <p>Sign up once, come back anytime — progress stays saved in your profile.</p>
+  </article>
+</section>
+<section class="how">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><strong>Sign up / log in</strong> — create your student account.</li>
+    <li><strong>Upload resume</strong> — we scan education and skills.</li>
+    <li><strong>Match &amp; plan</strong> — careers, gaps, and monthly roadmap.</li>
+    <li><strong>Prepare</strong> — checklist and interview questions.</li>
+  </ol>
+</section>
+{% endblock %}

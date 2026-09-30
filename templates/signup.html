@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Sign up — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Get started</p>
+  <h1>Create your account</h1>
+  <p class="lede">Register first, then upload your resume. We scan it and build your career plan — no long assessment form.</p>
+  <form id="signup-form" class="form-card">
+    <label>Full name
+      <input name="name" type="text" required autocomplete="name" placeholder="Alex Student">
+    </label>
+    <label>Email
+      <input name="email" type="email" required autocomplete="email" placeholder="you@school.edu">
+    </label>
+    <label>Password
+      <input name="password" type="password" required minlength="6" autocomplete="new-password">
+      <span class="hint">At least 6 characters</span>
+    </label>
+    <p class="error" id="signup-error" hidden></p>
+    <button type="submit" class="btn primary">Sign up &amp; upload resume</button>
+    <p class="muted">Already have an account? <a href="/login">Log in</a></p>
+  </form>
+</section>
+{% endblock %}

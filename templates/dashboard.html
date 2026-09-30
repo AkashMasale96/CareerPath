@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Overview</p>
+  <h1 id="dash-title">Student dashboard</h1>
+  <p class="lede" id="dash-sub">Your saved profile, top matches, and progress.</p>
+</section>
+<section class="grid-3 stats" id="dash-stats"></section>
+<section>
+  <h2>Recommended careers</h2>
+  <div id="dash-careers" class="stack"></div>
+</section>
+<section class="two-col">
+  <article class="card">
+    <h2>Profile snapshot</h2>
+    <dl id="dash-profile" class="meta-list"></dl>
+  </article>
+  <article class="card">
+    <h2>Next actions</h2>
+    <ul class="plain">
+      <li><a href="/roadmap">Check off this month’s roadmap step</a></li>
+      <li><a href="/upload">Re-scan your resume</a></li>
+      <li><a href="/resume">Finish the resume checklist</a></li>
+      <li><a href="/interview">Practice interview questions</a></li>
+      <li><a href="/assess">Retake assessment if your goals changed</a></li>
+    </ul>
+  </article>
+</section>
+{% endblock %}

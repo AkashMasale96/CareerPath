@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Recommendations — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Your matches</p>
+  <h1>Career recommendations</h1>
+  <p class="lede" id="results-intro">Loading your ranked careers…</p>
+  <div id="career-list" class="stack"></div>
+</section>
+<section>
+  <h2>Skill-gap analysis</h2>
+  <p class="muted" id="gap-career"></p>
+  <div class="progress-bar"><span id="gap-bar"></span></div>
+  <p id="gap-meta" class="muted"></p>
+  <div class="two-col gap-cols">
+    <div>
+      <h3>Skills you have</h3>
+      <ul id="gap-have" class="tag-list"></ul>
+    </div>
+    <div>
+      <h3>Skills to build</h3>
+      <ul id="gap-missing" class="tag-list"></ul>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Project recommendations</h2>
+  <div id="project-list" class="grid-3"></div>
+</section>
+<p class="center-links">
+  <a class="btn primary" href="/roadmap">Open 6-month roadmap</a>
+  <a class="btn ghost" href="/dashboard">Go to dashboard</a>
+</p>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Log in — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Welcome back</p>
+  <h1>Log in</h1>
+  <p class="lede">Sign in, upload your resume, and get careers, roadmap, and interview prep from your education and skills.</p>
+  <form id="login-form" class="form-card">
+    <label>Email
+      <input name="email" type="email" required autocomplete="email" placeholder="you@school.edu">
+    </label>
+    <label>Password
+      <input name="password" type="password" required minlength="6" autocomplete="current-password">
+    </label>
+    <p class="error" id="login-error" hidden></p>
+    <button type="submit" class="btn primary">Log in</button>
+    <p class="muted">New here? <a href="/signup">Create an account</a></p>
+  </form>
+</section>
+{% endblock %}

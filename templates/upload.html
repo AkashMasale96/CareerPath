@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Upload resume — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">Step 1</p>
+  <h1>Upload your resume</h1>
+  <p class="lede">We scan your file for education and skills, then generate career matches, a 6-month roadmap, projects, and interview questions.</p>
+</section>
+<section class="narrow">
+  <form id="scan-upload-form" class="form-card scan-card">
+    <div class="drop-zone" id="scan-drop-zone">
+      <input type="file" id="scan-file-input" name="file" accept=".pdf,.doc,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      <p class="drop-title">Drop your resume here</p>
+      <p class="muted">PDF or DOCX recommended · up to 8 MB</p>
+      <p class="file-picked muted" id="scan-file-label" hidden></p>
+    </div>
+    <p class="error" id="scan-upload-error" hidden></p>
+    <button type="submit" class="btn primary" id="scan-upload-btn">Scan resume &amp; build my plan</button>
+  </form>
+  <article class="card scan-results" id="scan-results" hidden>
+    <p class="eyebrow">Scan complete</p>
+    <h2>What we found</h2>
+    <dl class="meta-list" id="scan-parsed"></dl>
+    <p id="scan-top-career" class="muted"></p>
+    <div class="hero-actions">
+      <a class="btn primary" href="/dashboard">Open dashboard</a>
+      <a class="btn ghost" href="/results">View career matches</a>
+    </div>
+  </article>
+</section>
+{% endblock %}

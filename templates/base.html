@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}CareerPath AI{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <header class="nav">
+    <a class="brand" href="/">CareerPath <span>AI</span></a>
+    <nav id="main-nav">
+      <a href="/login" data-nav-guest>Log in</a>
+      <a href="/signup" data-nav-guest>Sign up</a>
+      <a href="/upload" data-nav-auth hidden>Upload</a>
+      <a href="/results" data-nav-auth hidden>Careers</a>
+      <a href="/dashboard" data-nav-auth hidden>Dashboard</a>
+      <a href="/roadmap" data-nav-auth hidden>Roadmap</a>
+      <a href="/resume" data-nav-auth hidden>Resume</a>
+      <a href="/interview" data-nav-auth hidden>Interview</a>
+      <button type="button" class="btn ghost nav-logout" id="nav-logout" data-nav-auth hidden>Log out</button>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    Built for students who want a clear next step — not another generic quiz.
+  </footer>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

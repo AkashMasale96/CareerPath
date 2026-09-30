@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Roadmap — CareerPath AI{% endblock %}
+{% block content %}
+<section class="narrow">
+  <p class="eyebrow">6 months</p>
+  <h1 id="road-title">Personalized roadmap</h1>
+  <p class="lede" id="road-sub">Track monthly steps. Progress is stored in SQLite.</p>
+  <div class="progress-bar large"><span id="road-bar"></span></div>
+  <p id="road-meta" class="muted"></p>
+</section>
+<ol id="road-steps" class="roadmap"></ol>
+{% endblock %}
